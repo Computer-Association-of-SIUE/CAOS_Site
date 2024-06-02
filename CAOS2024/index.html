@@ -6,156 +6,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;600;700&display=swap" rel="stylesheet">    
     <link rel="icon" href="assets/CAOSLogoSmall.png" type="image">
+    <link rel="stylesheet" type="text/css" href="css/footer.css">
+    <link rel="stylesheet" type="text/css" href="css/responsive_nav.css">
     <title>CAOS 2024 Home</title>
 </head>
 
 <style>
-    /* Add a black background color to the top navigation */
-    .topnav {
-        display: flex;
-        align-items: center;
-        background-color: #C43629;
-        overflow: hidden;
-        justify-content: space-between;
-    }
-
-    /* Style the links inside the navigation bar */
-    .topnav a {
-        display: block;
-        color: #f2f2f2;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-        font-size: 17px;
-        font-family: "Chakra Petch", Arial, Helvetica, sans-serif;
-        font-weight: 500;
-        line-height: 14px;
-        margin-right: 10px;
-    }
-
-    /* Change the color of links on hover */
-    .topnav a:hover {
-        background-color: #ddd;
-        color: black;
-    }
-
-    /* Add an active class to highlight the current page */
-    .topnav a.active {
-        background-color: black; /* We need to add distinguishing colors for the active page */
-        color: white;
-    }
-
-    /* Hide the link that should open and close the topnav on small screens */
-    .topnav .icon {
-        display: none;
-    }
-
-    .topnav a.join-btn {
-        background-color: black;
-        color: white;
-        padding: 15px 16px;
-        border-radius: 5px;
-        text-decoration: none;
-        font-weight: 600;
-        /* margin-left: auto; This ensures the Join button is pushed to the far right */
-        align-self: flex;
-        margin-right: 10px;
-        /* box-shadow: 0 0 5px #fff */
-    }
-
-    /* TODO: make the join button get larger when hovered over - look at pittcsc for inspiration */
-    .topnav a.join-btn:hover {
-        background-color: #555;
-        color: white;
-        box-shadow: 0 0 5px #fff
-    }
-
-    /* Flex container for the navigation links */
-    .nav-links {
-        display: flex;
-        align-items: center;
-    }
-
-    /* Dropdown container - needed to position the dropdown content */
-    .dropdown {
-        float: left;
-        overflow: hidden;
-    }
-
-    /* Style the dropdown button to fit inside the topnav */
-    .dropdown .dropbtn {
-        font-size: 17px;
-        border: none;
-        outline: none;
-        color: white;
-        padding: 14px 16px;
-        background-color: inherit;
-        font-family: inherit;
-        margin: 0;
-    }
-
-    /* Style the dropdown content (hidden by default) */
-    .dropdown-content {
-        display: none;
-        position: absolute;
-        background-color: #f9f9f9;
-        min-width: 160px;
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-        z-index: 1;
-    }
-
-    /* Style the links inside the dropdown */
-    .dropdown-content a {
-        float: none;
-        color: black;
-        padding: 12px 16px;
-        text-decoration: none;
-        display: block;
-        text-align: left;
-    }
-
-    /* Add a dark background on topnav links and the dropdown button on hover */
-    .topnav a:hover, .dropdown:hover .dropbtn {
-        background-color: #555;
-        color: white;
-    }
-
-    /* Add a grey background to dropdown links on hover */
-    .dropdown-content a:hover {
-        background-color: #ddd;
-        color: black;
-    }
-
-    /* Show the dropdown menu when the user moves the mouse over the dropdown button */
-    .dropdown:hover .dropdown-content {
-        display: block;
-    }
-
-    /* Responsive styling */
-    @media screen and (max-width: 600px) {
-        .nav-links {
-            display: none;
-            flex-direction: column;
-            width: 100%;
-            background-color: #C43629;
-        }
-
-        .nav-links a {
-            text-align: left;
-            padding: 14px;
-            border-top: 1px solid #bbb;
-        }
-
-        .topnav .icon {
-            display: block;
-            cursor: pointer;
-        }
-
-        .topnav.responsive .nav-links {
-            display: flex;
-        }
-    }
-
     .body {
         padding: 20px;
         font-family: "Chakra Petch", Arial, Helvetica, sans-serif;
@@ -184,24 +40,6 @@
         font-family: "Chakra Petch", sans-serif;
         background-color: #3C3C3C; /* Maybe we change this to black later*/
         color: white;
-    }
-    
-    footer {
-        background-color: #C43629;
-        color: white;
-        text-align: center;
-        padding: 10px;
-        font-family: "Chakra Petch", Arial, Helvetica, sans-serif;
-        font-weight: 300;
-        position: relative;
-    }
-
-    #footer-logo {
-        position: absolute;
-        bottom: 4px;
-        right: 10px;
-        height: 50px; /* Adjust as needed */
-        width: 50px;
     }
 </style>
 
