@@ -1,6 +1,6 @@
 /* Add a black background color to the top navigation */
     .topnav {
-        position: fixed;
+        position: absolute; /*cam use position: relative if we want it to scroll w/page */
         top: 0;
         width: 100%;
         display: flex;
