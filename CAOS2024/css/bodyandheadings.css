@@ -1,0 +1,40 @@
+.body {
+    padding: 20px;
+    font-family: "Chakra Petch", Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+h1 {
+    font-family: "Chakra Petch", Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 40px;
+}
+
+h2 {
+    font-family: "Chakra Petch", Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 35px;
+}
+
+h3 {
+    font-family: "Chakra Petch", Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    font-size: 30px;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    padding-top: 60px;    
+    display: flex;
+    flex-direction: column;    
+    position: relative;
+    min-height: 100vh;
+    margin-bottom: 60px;    
+    font-family: "Chakra Petch", sans-serif;
+    background-color: #3C3C3C; /* Maybe we change this to black later*/
+    color: white;
+}
