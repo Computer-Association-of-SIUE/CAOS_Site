@@ -32,7 +32,7 @@
 
     /* Add an active class to highlight the current page */
     .topnav a.active {
-        background-color: black; /* We need to add distinguishing colors for the active page */
+        background-color: #555; /* We need to add distinguishing colors for the active page */
         color: white;
     }
 
