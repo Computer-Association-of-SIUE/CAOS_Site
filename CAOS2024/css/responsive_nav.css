@@ -12,7 +12,7 @@
         width: 100%;
         display: flex;
         align-items: center;
-        background-color: #C43629;
+        background-color: transparent;
         /* overflow: hidden; */
         justify-content: space-between;
     }
@@ -33,13 +33,13 @@
 
     /* Change the color of links on hover */
     .topnav a:hover {
-        background-color: #ddd;
+        background-color: #C43629;
         color: black;
     }
 
     /* Add an active class to highlight the current page */
     .topnav a.active {
-        background-color: #555; /* We need to add distinguishing colors for the active page */
+        background-color: #C43629; /* We need to add distinguishing colors for the active page */
         color: white;
     }
 
@@ -63,7 +63,7 @@
 
     /* TODO: make the join button get larger when hovered over - look at pittcsc for inspiration */
     .topnav a.join-btn:hover {
-        background-color: #555;
+        background-color: C43629;
         color: white;
         box-shadow: 0 0 5px #fff;
         transform: scale(1.1);
@@ -104,6 +104,7 @@
         box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
         z-index: 1;
         margin-top: 0.3rem;
+        top: 100%;
     }
 
     /* Style the links inside the dropdown */
@@ -117,7 +118,7 @@
 
     /* Add a dark background on topnav links and the dropdown button on hover */
     .topnav a:hover, .dropdown:hover .dropbtn {
-        background-color: #555;
+        background-color: #C43629;
         color: white;
     }
 
@@ -158,3 +159,8 @@
             display: flex;
         }
     }
+
+    .arrow {
+        transform: rotate(180deg);
+        transition: 0.2s ease;
+      }
