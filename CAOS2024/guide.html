@@ -1,0 +1,79 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;600;700&display=swap" rel="stylesheet">    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="assets/CAOSLogoSmall.png" type="image">
+    <link 
+     href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" 
+     rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="css/footer.css">
+    <link rel="stylesheet" type="text/css" href="css/responsive_nav.css">
+    <link rel="stylesheet" type="text/css" href="css/bodyandheadings.css">
+    <title>CAOS 2024 Home</title>
+</head>
+
+<script>
+    function showNavBar() {
+        var x = document.getElementById("navLinks");
+        if (x.style.display === "block") {
+            x.style.display = "none";
+        } else {
+            x.style.display = "block";
+        }
+    }
+
+    // ensure nav bar reverts back to desktop view when window is resized up
+    window.addEventListener('resize', function() {
+        var nav = document.querySelector('.nav-links');
+        if (window.innerWidth > 768) {
+            nav.classList.remove('responsive');
+        }
+    });
+</script>
+
+<body>
+    <div class="topnav" id="myTopnav">
+        <a href="index.html" class="active">
+            <img src="assets/CAOS_Transparent_Square.png" alt="CAOS Logo" style="width: 27px; height: 27px;">
+        </a>
+        <div class="nav-links" id="navLinks">
+            <a href="aboutus.html">About Us</a>
+            <div class="dropdown">
+                <button class="dropbtn">Resources
+                    <i class="fa fa-caret-down" id="arrow"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="#class-guide">
+                        <i class='bx bx-book-reader'></i> SIUE Class Guide
+                    </a>
+                    <a href="#internships">
+                        <i class='bx bx-briefcase'></i> Internships
+                    </a>
+                    <a href="#blog">
+                        <i class='bx bx-news'></i> Blog
+                    </a>
+                </div>
+            </div>
+            <a href="calendar.html">Calendar</a>
+            <a href="projects.html">Projects</a>
+            <a href="join.html" class="join-btn">Join</a>
+        </div>
+        <a href="javascript:void(0);" class="icon" onclick="showNavBar()">&#9776;</a>
+    </div>
+    
+    <div class="body">
+        <h1>SIUE Class Guide</h1>
+    </div>
+</body>
+<footer>
+    <small>Built with ❤ by CAOS. <br>© 2024 CAOS. All rights reserved.<br></small>
+    <a href="http://www.siue.edu">
+        <img id="footer-logo" src="assets/Cougar_Logo_SIUE_Full-color_for-red-background_e5182d.png" alt="SIUE Logo" style="width: 50px; height: 50px;">
+    </a>
+</footer>
+</html>
