@@ -43,6 +43,12 @@
         color: white;
     }
 
+    /* Specific styles for the logo when it's active */
+    .topnav a.active.nav-logo {
+        padding-top: 1px;
+        padding-bottom: 2px;   
+    }
+
     /* Hide the link that should open and close the topnav on small screens */
     .topnav .icon {
         display: none;
@@ -173,3 +179,5 @@
         left: 0;
         bottom: -20px; /* This should be the negative of the height */
     }
+
+    
