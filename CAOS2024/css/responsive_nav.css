@@ -110,7 +110,7 @@
         box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
         z-index: 1;
         margin-top: 0.3rem;
-        top: 100%; /* distance between navbar & dropdown box */
+        top: 95%; /* distance between navbar & dropdown box */
     }
 
     /* Style the links inside the dropdown */
