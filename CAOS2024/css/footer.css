@@ -28,6 +28,11 @@
     
     .footer-home i {
         font-size: 36px;
-        /* margin-top: 0px; */
-        margin-bottom: 4px;
+        margin-top: -2px;
+        transition: transform 0.3s ease;
+    }
+
+    .footer-home a:hover i {
+        text-shadow: 0 0 10px black;
+        transform: scale(1.1);
     }
