@@ -34,6 +34,14 @@
             nav.classList.remove('responsive');
         }
     });
+
+    document.querySelector('.wave').addEventListener('mouseover', function() {
+        this.style.animationIterationCount = "infinite";
+    });
+
+    document.querySelector('.wave').addEventListener('mouseout', function() {
+        this.style.animationIterationCount = "1";
+    });
 </script>
 
 <body>
@@ -67,7 +75,7 @@
     </div>
     
     <div class="body">
-        <h1>Hello! Welcome to CAOS!</h1>
+        <h1>Hello! Welcome to CAOS! <span class="wave">👋</span></h1>
         <h2>About Us</h2>
         <p>CAOS (Computer Association of SIUE) is an organization open to any student interested in computer science or technology in general. Our purpose is to create leaders who have the skills, ability, and drive to utilize technology to enact positive change in society, and have a fun time doing it. We proudly strive for collaboration between computer science and all other disciplines in a positive manner. We provide a supportive organization where students can develop and grow academically, professionally, and personally, and push the boundaries on what it means to be a Cougar.</p>
         <h2 style="text-align: center;">The Officers</h2>
