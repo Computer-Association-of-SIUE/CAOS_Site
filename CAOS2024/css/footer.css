@@ -27,9 +27,7 @@
     }
     
     .footer-home i {
-        font-size: 32px;
-    }
-
-    .footer-home a {
-        margin-bottom: 20px;
+        font-size: 36px;
+        /* margin-top: 0px; */
+        margin-bottom: 4px;
     }
