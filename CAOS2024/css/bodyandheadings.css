@@ -75,3 +75,21 @@ body {
      60% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
     100% { transform: rotate( 0.0deg) }
   }
+
+
+.bio-div {
+    display: flex; 
+    margin: auto; 
+    height: fit-content;
+}
+.bio-img {
+    max-height: 300px; 
+    margin: auto;
+    padding: 1%;
+}
+
+.bio-txt {
+    display: flex; 
+    flex-direction: column; 
+    margin: auto;
+}
