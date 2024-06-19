@@ -14,3 +14,18 @@ window.addEventListener('resize', function() {
         nav.classList.remove('responsive');
     }
 });
+
+// Select the navbar
+var navbar = document.querySelector('.topnav');
+
+// Add a scroll event listener to the window
+window.addEventListener('scroll', function() {
+    // If the scroll position is greater than zero
+    if (window.pageYOffset > 0) {
+        // Add the sticky class to the navbar
+        navbar.classList.add('sticky');
+    } else {
+        // Otherwise, remove it
+        navbar.classList.remove('sticky');
+    }
+});
