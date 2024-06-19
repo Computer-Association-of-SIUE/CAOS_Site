@@ -81,6 +81,7 @@ body {
     display: flex; 
     margin: auto; 
     height: fit-content;
+    padding: 30px;
 }
 .bio-img {
     max-height: 300px; 
@@ -92,4 +93,5 @@ body {
     display: flex; 
     flex-direction: column; 
     margin: auto;
+    padding: 10px;
 }
