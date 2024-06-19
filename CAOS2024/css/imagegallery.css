@@ -31,6 +31,7 @@
             align-items: center;
             overflow: hidden;
             flex-direction: column;
+            z-index: 1;
         }
 
         #lightbox img {
