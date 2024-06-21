@@ -83,10 +83,12 @@ body {
     height: fit-content;
     padding: 30px;
 }
+
 .bio-img {
     max-height: 300px; 
     margin: auto;
     padding: 1%;
+    border-radius: 5px;
 }
 
 .bio-txt {
@@ -109,10 +111,84 @@ body {
     top: 60%;
     left: 50%;
     transform: translate(-50%, -10%);
+    min-width: 200px;
 }
 
 .bio-headerImg {
     width: 100%;
     height: auto; 
     opacity: .1; 
+}
+
+.card {
+    float: inline-start;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.5s;
+    width: 20%;
+    min-width: 250px;
+    border-radius: 5px;
+    background-color: #474747;
+    flex:auto;
+    margin: 2%;
+}
+.container {
+    padding: 2px 16px;
+}
+
+#header {
+    position: relative;
+  }
+  
+#header img {
+    width: 100%;
+    opacity: .1;
+}
+  
+#txt h1 {
+    margin: 0%;
+    text-align: center;
+    position: absolute;
+    bottom: 60%;
+    right: 40%;
+    font-size: 4vw; /** responsive font-size **/
+}
+
+#txt p {
+    padding-left: 10%;
+    text-align: center;
+    position: absolute;
+    bottom: 20%;
+    right: 10%;
+    font-size: 1.5vw; /** responsive font-size **/
+}
+
+
+@media screen and (max-width: 768px){
+    #txt h1 {
+        margin: 0%;
+        text-align: center;
+        position: absolute;
+        bottom: 70%;
+        right: 40%;
+        font-size: 5vw; /** responsive font-size **/
+    }
+    
+    #txt p {
+        padding-left: 10%;
+        text-align: center;
+        position: absolute;
+        bottom: 10%;
+        right: 10%;
+        font-size: 2vw; /** responsive font-size **/
+    }
+
+    .bio-div {
+        display: flex; 
+        margin: auto; 
+        height: fit-content;
+        padding: 30px;
+        flex-flow: column;
+    }
+
+
 }
