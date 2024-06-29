@@ -74,3 +74,66 @@ let currentIndex = 0;
                 }
             }
         });
+
+        // following functions is for filtering
+
+    filterSelection("all") // Execute the function and show all columns
+    function filterSelection(c) {
+        var x, i;
+        x = document.getElementsByClassName("column");
+        if (c == "all") c = "";
+        // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+        for (i = 0; i < x.length; i++) {
+            w3RemoveClass(x[i], "show");
+            if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+        }
+    }
+
+// Show filtered elements
+    function w3AddClass(element, name) {
+        var i, arr1, arr2;
+        arr1 = element.className.split(" ");
+        arr2 = name.split(" ");
+        for (i = 0; i < arr2.length; i++) {
+            if (arr1.indexOf(arr2[i]) == -1) {
+            element.className += " " + arr2[i];
+            }
+        }
+    }
+
+// Hide elements that are not selected
+    function w3RemoveClass(element, name) {
+        var i, arr1, arr2;
+        arr1 = element.className.split(" ");
+        arr2 = name.split(" ");
+        for (i = 0; i < arr2.length; i++) {
+            while (arr1.indexOf(arr2[i]) > -1) {
+            arr1.splice(arr1.indexOf(arr2[i]), 1);
+            }
+        }
+        element.className = arr1.join(" ");
+    }
+
+// Add active class to the current button (highlight it)
+let btns = Array.from(document.querySelectorAll('.btn'));
+let activeButton = null;
+
+// The button which would be used to add 'active' class to
+// all the buttons.
+let allButton = document.querySelector('#All');
+
+const handleClick = (e) => {
+  e.preventDefault();
+  e.currentTarget.classList.add('active');
+  // Checks that the activeButton is defined (initially it's null).
+  // Also checks that the button that was clicked is not the button which is
+  // already active to avoid removing the active class on double click.
+  if (activeButton != null && activeButton != e.currentTarget) {
+    activeButton.classList.remove('active');
+  }
+  activeButton = e.currentTarget;
+}
+
+btns.forEach(node => {
+  node.addEventListener('click', handleClick)
+});
