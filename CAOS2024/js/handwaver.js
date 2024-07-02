@@ -1,12 +1,3 @@
-function showNavBar() {
-    var x = document.getElementById("navLinks");
-    if (x.style.display === "block") {
-        x.style.display = "none";
-    } else {
-        x.style.display = "block";
-    }
-}
-
 // ensure nav bar reverts back to desktop view when window is resized up
 window.addEventListener('resize', function() {
     var nav = document.querySelector('.nav-links');
@@ -15,6 +6,7 @@ window.addEventListener('resize', function() {
     }
 });
 
+// This function handles wave emoji animation when page loads in and is hovered
 window.onload = function() {
     var wave = document.querySelector('.wave');
     wave.style.animationIterationCount = "2";

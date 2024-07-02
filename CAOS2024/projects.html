@@ -19,25 +19,6 @@
         <link rel="icon" href="assets/CAOSLogoSmall.png" type="image/png">
     </head>
 
-    <script>
-        function showNavBar() {
-            var x = document.getElementById("navLinks");
-            if (x.style.display === "block") {
-                x.style.display = "none";
-            } else {
-                x.style.display = "block";
-            }
-        }
-
-        // ensure nav bar reverts back to desktop view when window is resized up
-        window.addEventListener('resize', function() {
-            var nav = document.querySelector('.nav-links');
-            if (window.innerWidth > 768) {
-                nav.classList.remove('responsive');
-            }
-        });
-    </script>
-
     <body>
         <div class="topnav" id="myTopnav">
             <a href="https://caos2024.cs.siue.edu/">
@@ -50,15 +31,12 @@
                         <i class="fa fa-caret-down" id="arrow"></i>
                     </button>
                     <div class="dropdown-content">
-                        <a href="guide.html">
-                            <i class='bx bx-book-reader'></i> SIUE Class Guide
-                        </a>
+                        <a href="future.html">
+                            <i class='bx bx-book-reader'></i> Website Updates</a>
                         <a href="internships.html">
-                            <i class='bx bx-briefcase'></i> Internships
-                        </a>
+                            <i class='bx bx-briefcase'></i> Internships</a>
                         <a href="gallery.html">
-                            <i class='bx bx-image-alt'></i> Gallery
-                        </a>
+                            <i class='bx bx-image-alt'></i> Gallery</a>
                     </div>
                 </div>
                 <a href="calendar.html">Calendar</a>

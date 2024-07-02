@@ -1,3 +1,4 @@
+// function handles the drop down portion of navbar
 function showNavBar() {
     var x = document.getElementById("navLinks");
     if (x.style.display === "block") {
