@@ -39,6 +39,11 @@
         background-color: #3C3C3C; /* Maybe we change this to black later*/
         color: white;
     }
+
+    hr {
+        border: transparent;
+        padding: 1%;
+    }
 /* end default styling */
 
 /* styling for wave animation in index.html */
@@ -202,3 +207,83 @@
 }
 /* end mobile styling */
 
+/* start styling for ring animation */
+    .ring {
+        position: relative;
+        width: 500px;
+        height: 500px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .ring i {
+        position: absolute;
+        inset: 0;
+        border: 2px solid #474747;
+        transition: 0.5s;
+    }
+
+    .ring i:nth-child(1) {
+        border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
+        animation: animate 6s linear infinite;
+    }
+
+    .ring i:nth-child(2) {
+        border-radius: 41% 44% 56% 59%/38% 62% 63% 37%;
+        animation: animate 4s linear infinite;
+    }
+
+    .ring i:nth-child(3) {
+        border-radius: 41% 44% 56% 59%/38% 62% 63% 37%;
+        animation: animate2 10s linear infinite;
+    }
+
+    .ring:hover i {
+        border: 6px solid var(--clr);
+        filter: drop-shadow(0 0 20px var(--clr));
+    }
+    @keyframes animate {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    @keyframes animate2 {
+        0% {
+            transform: rotate(360deg);
+        }
+        100% {
+            transform: rotate(0deg);
+        }
+    }
+/* end styling for ring animation */
+
+/* styling for home page */
+    .center {
+        text-align: center;
+        padding: 2%;
+    }
+    .buttonH {
+        border-radius: 5px; 
+        padding: 15px; 
+        position: relative;
+        text-decoration: none; 
+        background-color: #C43629; 
+        margin: 3%;
+    }
+
+    .buttonH:hover {
+        background-color: #9b261b;
+    }
+
+    .imageH {
+        max-width: 700px; 
+        margin: auto; 
+        padding: 1%; 
+        border-radius: 5px;
+    }
+/* end styling for home page */
