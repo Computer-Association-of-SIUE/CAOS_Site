@@ -1396,7 +1396,10 @@ btns.forEach(node => {
 
 ---
 ### The HTML Pages
-If any pages are added/removed, make sure to include/remove links in the navbar to reflect it.
+If any pages are added/removed, make sure to include/remove links in the navbar to reflect it. First, this documentation will go through elements native to all HTML files and then specific HTML files.
+
+---
+
 #### `<head>` Content
 The head of each HTML document is the same (other than the `<title>` tag). It holds most of links to the CSS stylesheets, the [Boxicon](https://boxicons.com/) CSS reference, CAOS favicon, and the W3Schools reference link. It is very easy to add specific styling elements, just include their reference links inside these tags.
 
@@ -1459,3 +1462,249 @@ Each HTML page also has the same footer, with the exception that the homepage (`
 
 - **Description**: The footer at the bottom of the page.
 - **Navigation Links**: The home icon is located in the left referencing `index.html` and the SIUE logo in the right references the SIUE university website for quick access.
+---
+#### aboutus.html
+This HTML page is about listing the current officers in CAOS. Each year, this page most likely will need to be updated with any officer turnover.
+
+##### Header Section
+```html
+<div id="header">
+    <img src="assets/loft.png">
+    <div id="txt">
+        <h1>About Us</h1>
+        <p>CAOS (Computer Association of SIUE) is an organization open to any student interested in computer science or technology in general. Our purpose is to create leaders who have the skills, ability, and drive to utilize technology to enact positive change in society, and have a fun time doing it. We proudly strive for collaboration between computer science and all other disciplines in a positive manner. We provide a supportive organization where students can develop and grow academically, professionally, and personally, while pushing the boundaries on what it means to be a Cougar.</p>
+    </div>
+</div>
+```
+- **About Us Description**: This is where the CAOS purpose statement can be modified. If the styling of this section needs to be changed, make sure to look at the `#txt` div of `bodyandheadings.css`.
+
+##### Officers Section
+```html
+<h1 style="text-align: center;">The Officers</h1>
+
+<div class="bio-div">
+    <img class="bio-img" src="assets/bio pics/placeholder.jpg">
+    <div class="bio-txt">
+        <h3>Zakery Hickey - <i>President</i></h3>
+        <p>My name is Zakery and I'm a junior majoring in Computer Science! I also have a strong passion for cybersecurity focusing on server based security and vulnerabilities. When not working on class material I am typically working on side projects or practicing cybersecurity skills at hackthebox.</p>
+        <a href="mailto:email@siue.edu"><i class='bx bx-envelope bx-lg'></i></a>
+    </div>
+</div>
+```
+These bio sections are repeated for other officers with their respective bios and contact information.
+
+---
+
+#### calendar.html
+This HTML file shows the CAOS activity calendar (powered by the CAOS Google Calendar).
+```html
+<div class="body">
+    <h1>Calendar</h1>
+        <div style="height: 600px; text-align: center;"> <!-- This div allows the calendar to exist w/footer/, might need to make own specifc css -->
+            <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FChicago&bgcolor=%23ffffff&showTitle=0&src=c2l1ZS5lZHUuY2Fvc0BnbWFpbC5jb20&src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%23039BE5&color=%2333B679&color=%230B8043" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>        
+        </div>
+</div>
+```
+Any sizing/orientation of the calendar can be done in the `iframe src` tag.
+
+---
+
+#### future.html
+This HTML page lists CAOS website goals, as well as ongoing maintenance. 
+```html
+<div class="body">
+    <div style="margin: 2% 6%;">
+        <h1>Website Goals</h1>
+            <p>Our website is designed to be a one-stop shop for all things CAOS. With that being said, there is a lot we have in store. Regardless of what gets done, however, we want to make sure that continued support is seamless between officers. To achieve this, our goal for the project website is to maintain readability and ensure that the code is easy to understand for all contributors. This approach not only facilitates seamless collaboration among team members but also promotes efficient troubleshooting and future maintenance. By adhering to best practices in coding standards, such as clear naming conventions, consistent indentation, and comprehensive commenting, we aim to create a codebase that is intuitive and accessible. This commitment to clarity and simplicity will enhance the overall quality of our website, making it more robust, scalable, and user-friendly.
+            <hr>
+            <h2>Key Features</h2>
+            <ul>
+                <li>Microsoft Authentication through SIUE's email</li>
+                <li>Forum requiring sign-in for access</li>
+                <li>Switch domain from CAOS2024 to CAOS</li>
+                <li>Improved mobile support</li>
+            </ul>
+            <hr>
+            <h2>Ongoing Support</h2>
+                <ul>
+                    <li>Updating Gallery with new pictures</li>
+                    <li>Updating Calendar with new events</li>
+                    <li>Updating About Us when new officers are elected</li>
+                    <li>Improving styling to better reflect current trends</li>
+                    <li>Simplifying backend for better readability</li>
+                    <li>Documenting changes for new members</li>
+                    <li>Have suggestions? Found a bug? Let us know- <a href="siue.edu.caos@gmail.com">Email us!</a></li>
+                </ul>
+            <hr>
+    </div>
+</div>
+```
+---
+
+#### gallery.html
+This is the image gallery that allows users to browse SIUE/CAOS photos.
+
+##### Gallery Body
+
+```html
+    <div class="body">
+        <h1>Image Gallery</h1>
+
+        <div id="myBtnContainer">
+            <button class="btn" onclick="filterSelection('all')">Show all</button>
+            <button class="btn" onclick="filterSelection('General')">General</button>
+            <button class="btn" onclick="filterSelection('eHacks2024')">eHacks 2024</button>
+            <button class="btn" onclick="filterSelection('AMAFall2023')">AMA Fall 2023</button>
+        </div>
+
+        <div class="gallery" onclick="openLightbox(event)">
+            <img class="filter General" src="assets/Engineering.png" alt="School of Engineering (Day)">
+            <img class="filter General" src="assets/Engineering_sunset.png" alt="School of Engineering (Sunset)">
+            <img class="filter General" src="assets/loft.png" alt="Innovation Loft">
+            <img class="filter eHacks2024" src="assets/caos_ehacks.jpg" alt="Ehacks CAOS Presentation">
+            <img class="filter AMAFall2023" src="assets/IMG_0366_4.jpg" alt="2 Former Officers of CAOS">
+            <img class="filter AMAFall2023" src="assets/IMG_0367_4.jpg" alt="Audience for AMA 2023">
+            <img class="filter AMAFall2023" src="assets/IMG_0368_2.jpg" alt="Former Officer">
+            <img class="filter AMAFall2023" src="assets/IMG_0370_2.jpg" alt="3 AMA Participants">
+            <img class="filter AMAFall2024" src="assets/IMG_0371_2.jpg" alt="Zak, Current President">
+            <img class="filter General" src="assets/steak.jpg" alt="Steak Statue">
+            <img class="filter eHacks2024" src="assets/eHacks2.jpg" alt="Ehacks audience">
+            <img class="filter eHacks2024" src="assets/ehacksGroupPhoto.jpg" alt="Ehacks Participants">
+        </div>
+    </div>
+```
+
+- **Description**: Contains the main content of the gallery page.
+- **Header**: Displays the page title "Image Gallery".
+- **Filter Buttons**: Buttons to filter images by category (Show all, General, eHacks 2024, AMA Fall 2023).
+- **Gallery**: A collection of images with different filter classes (`General`, `eHacks2024`, `AMAFall2023`). Clicking on any image opens the lightbox.
+
+##### Lightbox
+
+```html
+    <!-- Lightbox container -->
+    <div id="lightbox">
+        <!-- Close button -->
+        <span id="close-btn" onclick="closeLightbox()"><i class='bx bx-x'></i></span>
+
+        <!-- Main lightbox image -->
+        <img id="lightbox-img" src="" alt="lightbox image">
+
+        <!-- Thumbnails container -->
+        <div id="thumbnail-container">
+            <!-- Thumbnails will be added dynamically using JavaScript -->
+        </div>
+
+        <!-- Previous and Next buttons -->
+        <button id="prev-btn" onclick="changeImage(-1)"><i class='bx bx-chevron-left'></i></button>
+        <button id="next-btn" onclick="changeImage(1)"><i class='bx bx-chevron-right'></i></button>
+    </div>
+</div>
+```
+
+- **Description**: The lightbox component that displays the selected image in a larger view.
+- **Close Button**: A button to close the lightbox.
+- **Main Lightbox Image**: Displays the currently selected image.
+- **Thumbnails Container**: Holds thumbnails of all images in the gallery. Thumbnails are added dynamically using JavaScript.
+- **Navigation Buttons**: Buttons to navigate to the previous or next image in the lightbox.
+
+---
+
+#### index.html
+This is the homepage for the website, holding many of the links listed in the **Resources** that are not natively seen by the user. 
+##### Welcome div/handwaving animation
+This is where the welcome statement can be modified, as well as the links to become more involved with CAOS: 
+```html
+<div class="bio-div">
+    <img class="imageH" src="assets\EngineeringCropped.png">
+    <div class="bio-txt center">
+        <h1>Hello! Welcome to CAOS! <span class="wave">👋</span></h1>
+            <p>CAOS welcomes all students passionate about computer science and modern technologies. Our goal is to cultivate leaders proficient in technology, committed to driving positive societal change. Emphasizing interdisciplinary collaboration, we foster a community at SIUE where students can thrive academically, professionally, and personally.</p>
+                <div>
+                    <a class="buttonH" href="https://discord.gg/fSaXnVGnbv">Discord</a> 
+                    <a class="buttonH" href="https://getinvolved.siue.edu/organization/caos">GetInvolved</a>
+                </div>
+    </div>
+</div>
+```
+##### Ring Animations with Photos
+Depending on where the image is placed in relation to the ring, the ring will either be to the left or right of the image. For example, this snippet has the ring animation to the left of the image.
+```html
+<div class="bio-div">
+    <div class="bio-txt ring center">
+        <i style="--clr:white;"></i>
+        <i style="--clr:black;"></i>
+        <i style="--clr:#C43629;"></i>
+        <h1>Project Showcase</h1>
+        <p>Interested in what our members have created?</p>
+        <a class="buttonH" href="projects.html">Projects</a> 
+        </div>
+            <img class="imageH" src="assets\ehacksGroupPhoto.jpg">
+        </div>
+    </div>
+<div>
+```
+
+---
+
+#### internships.html
+This HTML file includes links for internship opportunities for CS majors.
+```html
+<div class="body">
+    <div style="margin: 2% 6%;">
+        <h1>Internships</h1>
+            <p>Internships during university play a crucial role in shaping a student's career and personal development. They provide invaluable hands-on experience, allowing students to apply theoretical knowledge in real-world settings and gain practical skills that are often not covered in academic curricula. Internships also offer insights into specific industries and career paths, helping students make informed decisions about their futures. Additionally, they provide opportunities to build professional networks, receive mentorship, and improve employability. By exposing students to the dynamics of the workplace, internships help bridge the gap between education and employment, making graduates more competitive and prepared for their chosen careers.</p>
+            <hr>
+            <h2>Internship Opportunities</h2>
+            <ul>
+                <li><a href="https://www.siue.edu/career-development-center/about/events.shtml">SIUE Career Fair</a></li>
+                <li><a href="https://www.siue.edu/arts-and-sciences/papa/student-resources/job-opportunities.shtml">Local Career Options</a></li>
+                <li><a href="https://www.siue.edu/student-employment/gradleaders/Student-Login.shtml">On-Campus Employment</a></li>
+                <li><a href="https://github.com/SimplifyJobs/Summer2025-Internships"</li>2025 CS Internships through Simplify/PittCSC<a></li>
+                <li><a href="https://www.levels.fyi/internships/"</li>CS Internships & Salaries - Levels.fyi<a></li>
+                <li><a href="https://docs.google.com/document/d/1x6uVpjK-bDc7_Up9Gofr91-qovdc2eZW_DpI1N9oNfo/edit"</li>CS Internships 101<a></li>
+            </ul>
+        </div>
+    </div>
+```
+---
+
+#### projects.html
+This HTML page will (eventually) list all the amazing projects that CAOS members have worked on using card containers.
+
+```html
+<div class="body">
+            <h1>Projects</h1>
+            <p>This page is a vibrant showcase of computer science projects, from websites to games, highlighting our members' ingenuity and collaboration. It's more than just display; it's a platform for knowledge sharing and inspiration, celebrating achievements and advancing our field through practical applications of computer science concepts.</p>
+            <p>Since the website is currently being built, it’s empty- be on the lookout for our member’s achievements!</p>
+        
+            <div class="card">
+                <img src="assets/CAOS_RebornUpscaled2.png" style="width: 100%; border-radius: 5px 5px 0 0;">
+                <div class="container">
+                    <h3><b>CAOS Website</b></h3>
+                    <small><b>Luke Welsh and Sydney Barnett</b><br><i>Summer 2024</i><br>https://caos2024.cs.siue.edu/</small>
+                    <p>Created from scratch using HTML/CSS and Javascript with ongoing support.</p>
+                </div>
+            </div>
+        
+            <div class="card">
+                <img src="assets/CAOS_RebornUpscaled2.png" style="width: 100%; border-radius: 5px 5px 0 0;">
+                <div class="container">
+                    <h3><b>Sample Card 1</b></h3>
+                    <small><b>John Doe and Jane Doe</b><br><i>Summer 2024</i><br>site/repo link</small>
+                    <p>Insert summary text here in regards to how project was done, with what languages, etc.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="assets/CAOS_RebornUpscaled2.png" style="width: 100%; border-radius: 5px 5px 0 0;">
+                <div class="container">
+                    <h3><b>Sample Card 2</b></h3>
+                    <small><b>John Doe and Jane Doe</b><br><i>Summer 2024</i><br>site/repo link</small>
+                    <p>Insert summary text here in regards to how project was done, with what languages, etc.</p>
+                </div>
+            </div>
+```
+Any project description/photo/link can be easily updated here.
+
+
