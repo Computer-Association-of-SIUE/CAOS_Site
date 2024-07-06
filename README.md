@@ -592,7 +592,7 @@ The following CSS rules define the styling for the home button within the footer
 ---
 
 #### responsive_nav.css
-Much like the footer, we can easily modify the navbar running across the top of all HTML pages. However, the navbar sometimes doesn't correctly repopulate links once it has been minimized and remaximized. This will be fixed in a future update. For sake of completion, the JavaScript file that works with this navbar will also be included below this.
+Much like the footer, we can easily modify the navbar running across the top of all HTML pages. However, the navbar sometimes doesn't correctly repopulate links once it has been minimized and remaximized. This will be fixed in a future update. For sake of completion, the JavaScript file that works with this navbar will also be included below this. Also, some parameters in the navbar need to edited in each specific HTML file that contains the `<div>` elements of the navbar.
 
 ##### Table of Contents
 
@@ -1395,3 +1395,67 @@ btns.forEach(node => {
 - **Active State**: Adds the `active` class to the clicked button and removes it from the previously active button.
 
 ---
+### The HTML Pages
+If any pages are added/removed, make sure to include/remove links in the navbar to reflect it.
+#### `<head>` Content
+The head of each HTML document is the same (other than the `<title>` tag). It holds most of links to the CSS stylesheets, the [Boxicon](https://boxicons.com/) CSS reference, CAOS favicon, and the W3Schools reference link. It is very easy to add specific styling elements, just include their reference links inside these tags.
+
+#### Navigation Bar
+```html
+<body>
+    <div class="topnav" id="myTopnav">
+        <a href="https://caos2024.cs.siue.edu/">
+            <img src="assets/CAOS_Transparent_Min.png" alt="CAOS Logo" style="width: 49px">
+        </a>
+        <div class="nav-links" id="navLinks">
+            <a href="aboutus.html">About Us</a>
+            <div class="dropdown">
+                <button class="dropbtn">Resources
+                    <i class="fa fa-caret-down" id="arrow"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="guide.html">
+                        <i class='bx bx-book-reader'></i> SIUE Class Guide
+                    </a>
+                    <a href="internships.html">
+                        <i class='bx bx-briefcase'></i> Internships
+                    </a>
+                    <a href="gallery.html" class="active">
+                        <i class='bx bx-image-alt'></i> Gallery
+                    </a>
+                </div>
+            </div>
+            <a href="calendar.html">Calendar</a>
+            <a href="projects.html">Projects</a>
+            <a href="https://discord.gg/fSaXnVGnbv" class="join-btn">Join</a>
+        </div>
+        <a href="javascript:void(0);" class="icon" onclick="showNavBar()">&#9776;</a>
+    </div>
+```
+
+- **Description**: The navigation bar at the top of the page.
+- **Common Structure**: The `topnav` div structure is the same across all pages, except for the `active` class, which highlights the current page (in this case, "Gallery").
+- **Logo**: Links to the CAOS logo, redirecting to the homepage.
+- **Navigation Links**: Links to different sections of the website (About Us, Resources with a dropdown, Calendar, Projects, Join).
+- **Dropdown Menu**: Contains links to resources with an active state on the Gallery page.
+- **Responsive Navigation**: Includes a hamburger menu for smaller screens, toggled by the `showNavBar()` function.
+
+#### Footer Section
+Each HTML page also has the same footer, with the exception that the homepage (`index.html`) doesn't include the Boxicon homepage icon in the left.
+
+```html
+<footer>
+    <div class="footer-home">
+        <a href="https://caos2024.cs.siue.edu/">
+            <i class='bx bx-home'></i>
+        </a>
+    </div>
+    <small>Built with ❤ by CAOS. <br>© 2024 CAOS. All rights reserved.<br></small>
+    <a href="http://www.siue.edu">
+        <img id="footer-logo" src="assets/Cougar_Logo_SIUE_Full-color_for-red-background_e5182d.png" alt="SIUE Logo">
+    </a>
+</footer>
+```
+
+- **Description**: The footer at the bottom of the page.
+- **Navigation Links**: The home icon is located in the left referencing `index.html` and the SIUE logo in the right references the SIUE university website for quick access.
