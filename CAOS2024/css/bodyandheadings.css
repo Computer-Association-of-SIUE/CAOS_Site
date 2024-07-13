@@ -210,8 +210,8 @@
 /* start styling for ring animation */
     .ring {
         position: relative;
-        width: 500px;
-        height: 500px;
+        width: 100%;
+        
         display: flex;
         justify-content: center;
         align-items: center;
@@ -219,8 +219,8 @@
 
 @media (max-width: 600px) {
     .ring {
-        width: 350px; /* Smaller size for mobile */
-        height: 350px; /* Smaller size for mobile */
+        width: 80%; /* Smaller size for mobile */
+        height: 80%; /* Smaller size for mobile */
         margin: 10%
     }
 
@@ -258,14 +258,15 @@
 
     .bio-div {
         flex-direction: column; /* Stacks the elements vertically on small screens */
+        word-wrap: normal;
     }
     
     .bio-txt, .imageH {
-        margin-bottom: 20px; /* Adds space below the text and image */
+        margin-bottom: 2%; /* Adds space below the text and image */
     }
     
     .buttonH {
-        margin-top: 20px; /* Adds space above the button */
+        margin-top: 2%; /* Adds space above the button */
     }
 }
 

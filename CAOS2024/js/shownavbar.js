@@ -31,4 +31,8 @@ window.addEventListener('scroll', function() {
     }
 });
 
-window.onresize = function(){ location.reload(); }
+window.onresize = function(){
+    if (window.innerWidth > 768) {
+        location.reload(); 
+    }
+};
