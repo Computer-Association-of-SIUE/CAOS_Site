@@ -30,3 +30,5 @@ window.addEventListener('scroll', function() {
         navbar.classList.remove('sticky');
     }
 });
+
+window.onresize = function(){ location.reload(); }

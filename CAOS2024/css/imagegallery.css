@@ -104,6 +104,12 @@
         opacity: 0.7;
     }
 
+    @media screen and (max-width: 600px){
+        .lightbox, .thumbnail {
+            display: none;
+        }
+    }
+
 /* The following is for filtering */
     .filter {
         display: none;

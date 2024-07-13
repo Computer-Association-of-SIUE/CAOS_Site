@@ -217,26 +217,57 @@
         align-items: center;
     }
 
-    @media (max-width: 600px) {
-        .ring {
-            width: 300px; /* Smaller size for mobile */
-            height: 300px; /* Smaller size for mobile */
-        }
+@media (max-width: 600px) {
+    .ring {
+        width: 350px; /* Smaller size for mobile */
+        height: 350px; /* Smaller size for mobile */
+        margin: 10%
     }
 
-    @media (max-width: 600px) {
-        .bio-div {
-            flex-direction: column; /* Stacks the elements vertically on small screens */
-        }
-    
-        .bio-txt, .imageH {
-            margin-bottom: 20px; /* Adds space below the text and image */
-        }
-    
-        .buttonH {
-            margin-top: 20px; /* Adds space above the button */
-        }
+    #one {
+        order: 1;
     }
+
+    #two {
+        order: 2;
+    }
+
+    #three {
+        order: 4;
+    }
+
+    #four {
+        order: 3;
+    }
+
+    #five {
+        order: 5;
+    }
+
+    #six {
+        order: 6;
+    }
+
+    #seven {
+        order: 8;
+    }
+
+    #eight {
+        order: 7;
+    }
+
+    .bio-div {
+        flex-direction: column; /* Stacks the elements vertically on small screens */
+    }
+    
+    .bio-txt, .imageH {
+        margin-bottom: 20px; /* Adds space below the text and image */
+    }
+    
+    .buttonH {
+        margin-top: 20px; /* Adds space above the button */
+    }
+}
 
     .ring i {
         position: absolute;
