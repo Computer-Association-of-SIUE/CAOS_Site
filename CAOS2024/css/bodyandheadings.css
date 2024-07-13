@@ -217,6 +217,27 @@
         align-items: center;
     }
 
+    @media (max-width: 600px) {
+        .ring {
+            width: 300px; /* Smaller size for mobile */
+            height: 300px; /* Smaller size for mobile */
+        }
+    }
+
+    @media (max-width: 600px) {
+        .bio-div {
+            flex-direction: column; /* Stacks the elements vertically on small screens */
+        }
+    
+        .bio-txt, .imageH {
+            margin-bottom: 20px; /* Adds space below the text and image */
+        }
+    
+        .buttonH {
+            margin-top: 20px; /* Adds space above the button */
+        }
+    }
+
     .ring i {
         position: absolute;
         inset: 0;
@@ -281,9 +302,10 @@
     }
 
     .imageH {
-        max-width: 700px; 
+        max-width: 100%; 
         margin: auto; 
         padding: 1%; 
         border-radius: 5px;
+        height: auto;
     }
 /* end styling for home page */
