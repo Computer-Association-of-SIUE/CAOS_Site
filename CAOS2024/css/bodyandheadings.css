@@ -214,7 +214,9 @@
 /* start styling for ring animation */
     .ring {
         position: relative;
-        width: 100%;
+        /* width: 40%; */
+        width: 450px;
+        height: 450px;
         
         display: flex;
         justify-content: center;
