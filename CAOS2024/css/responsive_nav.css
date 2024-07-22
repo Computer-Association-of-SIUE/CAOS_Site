@@ -181,7 +181,6 @@
     /* We need to fix this for better visibility */
     @media screen and (max-width: 768px) {
         .nav-links {
-            display: none;
             flex-direction: column;
             width: 100%;
             background-color: #C43629;
@@ -190,7 +189,6 @@
         .nav-links a {
             text-align: left;
             padding: 14px;
-            border-top: 1px solid #bbb;
         }
 
         .topnav .icon {
@@ -198,7 +196,7 @@
             cursor: pointer;
         }
 
-        .topnav.responsive .nav-links {
+        .topnav .responsive .nav-links {
             display: flex;
         }
     }

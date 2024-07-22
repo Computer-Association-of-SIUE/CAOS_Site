@@ -274,6 +274,10 @@
     .buttonH {
         margin-top: 2%; /* Adds space above the button */
     }
+
+    #ignore {
+        display: none;
+    }
 }
 
     .ring i {
