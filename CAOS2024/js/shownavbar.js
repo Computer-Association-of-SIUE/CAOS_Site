@@ -1,10 +1,10 @@
 // function handles the drop down portion of navbar
 function showNavBar() {
-    var x = document.getElementById("navLinks");
-    if (x.style.display === "block") {
-        x.style.display = "none";
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
     } else {
-        x.style.display = "block";
+        x.className = "topnav";
     }
 }
 

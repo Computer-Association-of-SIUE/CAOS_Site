@@ -180,29 +180,19 @@
     /* Responsive styling */
     /* We need to fix this for better visibility */
     @media screen and (max-width: 768px) {
+        .topnav a.icon {
+            display: block;
+        }
+        .nav-links a {
+            display: block;
+            text-align: left;
+        }
         .nav-links {
+            display: none; /* Hide nav-links by default */
             flex-direction: column;
             width: 100%;
-            background-color: #C43629;
         }
-
-        .nav-links a {
-            text-align: left;
-            padding: 14px;
-        }
-
-        .topnav .icon {
-            display: block;
-            cursor: pointer;
-        }
-
-        .topnav .responsive .nav-links {
-            display: flex;
-        }
-
-        #ignore {
-            display: none !important; 
-            visibility: hidden !important;
-            opacity: 0%;
+        .topnav.responsive .nav-links {
+            display: flex; /* Show nav-links when responsive class is added */
         }
     }
