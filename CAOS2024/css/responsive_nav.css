@@ -199,4 +199,10 @@
         .topnav .responsive .nav-links {
             display: flex;
         }
+
+        #ignore {
+            display: none !important; 
+            visibility: hidden !important;
+            opacity: 0%;
+        }
     }
