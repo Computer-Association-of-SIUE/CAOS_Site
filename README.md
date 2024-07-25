@@ -1,6 +1,6 @@
 # CAOS_SITE
 ![CAOS_Logo](/CAOS2024/assets/CAOS_Transparent_Min.png)
-This repo holds the files for the Computer Association of SIUE (CAOS) website for the academic year 2024 - 2025. You can find the live version of this site [here](caos.cs.siue.edu).
+This repo holds the files for the Computer Association of SIUE (CAOS) website for the academic year 2024 - 2025. You can find the live version of this site [here](https://caos.cs.siue.edu/).
 
 ## Background
 This website was constructed as part of a summer project series that aimed to give SIUE CAOS members more experience in bettering their development skills. CAOS did not have a site it actively maintained since 2008. This new site will represent a starting point that CAOS can hopefully take into the future.
