@@ -1,38 +1,40 @@
-// function handles the drop down portion of navbar
 function showNavBar() {
     var x = document.getElementById("myTopnav");
-    if (x.className === "topnav") {
+    if (x.className.indexOf("responsive") === -1) {
         x.className += " responsive";
     } else {
-        x.className = "topnav";
+        x.className = x.className.replace(" responsive", "");
     }
 }
 
-// ensure nav bar reverts back to desktop view when window is resized up
+// Ensure nav bar reverts back to desktop view when window is resized up
 window.addEventListener('resize', function() {
     var nav = document.querySelector('.nav-links');
     if (window.innerWidth > 768) {
-        nav.classList.remove('responsive');
+        var topnav = document.getElementById("myTopnav");
+        topnav.className = topnav.className.replace(" responsive", "");
     }
 });
 
-// Select the navbar
-var navbar = document.querySelector('.topnav');
-
-// Add a scroll event listener to the window
+// Handle sticky navbar on scroll
 window.addEventListener('scroll', function() {
-    // If the scroll position is greater than zero
+    var navbar = document.querySelector('.topnav');
     if (window.pageYOffset > 0) {
-        // Add the sticky class to the navbar
         navbar.classList.add('sticky');
     } else {
-        // Otherwise, remove it
         navbar.classList.remove('sticky');
     }
 });
 
-window.onresize = function(){
-    if (window.innerWidth > 768) {
-        location.reload(); 
-    }
-};
+// Handle dropdown button active state
+document.querySelectorAll('.dropbtn').forEach(button => {
+    button.addEventListener('click', function() {
+        this.classList.toggle('active');
+        var dropdownContent = this.nextElementSibling;
+        if (dropdownContent.style.display === "block") {
+            dropdownContent.style.display = "none";
+        } else {
+            dropdownContent.style.display = "block";
+        }
+    });
+});
