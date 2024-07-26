@@ -197,3 +197,27 @@
             z-index: 1002;
         }
     }
+
+    .os-theme-dark > .os-scrollbar > .os-scrollbar-track > .os-scrollbar-handle {
+        background: #C43629 !important;
+    }
+    
+    /* .os-theme-dark > .os-scrollbar {
+        background: black;
+    }
+     */
+
+    /* body::-webkit-scrollbar {
+        width: 0.7em;
+        background: black;
+    }
+    body::-webkit-scrollbar-thumb {
+        background: #C43629;
+        height:30px;
+        border-radius: 0px;
+    }
+      
+    body::-webkit-scrollbar-track-piece
+    {
+        display:none;
+    } */

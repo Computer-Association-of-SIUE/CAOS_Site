@@ -38,3 +38,24 @@ document.querySelectorAll('.dropbtn').forEach(button => {
         }
     });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    OverlayScrollbars(document.querySelectorAll('body'), {
+        className: "os-theme-dark",
+        sizeAutoCapable: true,
+        paddingAbsolute: true,
+        scrollbars: {
+            visibility: "auto",
+            autoHide: "move",
+            autoHideDelay: 500,
+            dragScrolling: true,
+            clickScrolling: true,
+            touchSupport: true,
+            snapHandle: true
+        }
+    });
+});
+
+
+
+
