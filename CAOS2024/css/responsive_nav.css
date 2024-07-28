@@ -182,6 +182,7 @@
     @media screen and (max-width: 768px) {
         .topnav a.icon {
             display: block;
+            z-index: 1000;
         }
         .nav-links {
             display: none;
@@ -196,6 +197,14 @@
             width: 100%;
             z-index: 1002;
         }
+
+        /* .on-top { it has something to do with the following, atm this kinda fixes but not really. moves bar below grey area and no longer fixed to top of screen when scrolling
+            transform: translate3d(0, 0, 200px);
+                -webkit-transform: translate3d(0, 0, 0);
+                 transform: translate3d(0, 0, 0);
+                 position:absolute;
+                 z-index: 1000;
+        } */
     }
 
     .os-theme-dark > .os-scrollbar > .os-scrollbar-track > .os-scrollbar-handle {
