@@ -14,7 +14,7 @@
         background-color: black;
         justify-content: space-between;
         border-top: 1px solid black;
-        z-index: 1000;
+        z-index: 0;
     }
     
     /* Style the links inside the navigation bar */
@@ -174,7 +174,7 @@
         position: fixed;
         top: 0;
         width: 100%;
-        z-index: 1001;
+        z-index: 1;
     }
 
     /* Responsive styling */
@@ -182,7 +182,7 @@
     @media screen and (max-width: 768px) {
         .topnav a.icon {
             display: block;
-            z-index: 1000;
+            z-index: 2;
         }
         .nav-links {
             display: none;
@@ -195,38 +195,10 @@
         .dropdown-content {
             position: relative;
             width: 100%;
-            z-index: 1002;
+            z-index: 2;
         }
-
-        /* .on-top { it has something to do with the following, atm this kinda fixes but not really. moves bar below grey area and no longer fixed to top of screen when scrolling
-            transform: translate3d(0, 0, 200px);
-                -webkit-transform: translate3d(0, 0, 0);
-                 transform: translate3d(0, 0, 0);
-                 position:absolute;
-                 z-index: 1000;
-        } */
     }
 
     .os-theme-dark > .os-scrollbar > .os-scrollbar-track > .os-scrollbar-handle {
         background: #C43629 !important;
     }
-    
-    /* .os-theme-dark > .os-scrollbar {
-        background: black;
-    }
-     */
-
-    /* body::-webkit-scrollbar {
-        width: 0.7em;
-        background: black;
-    }
-    body::-webkit-scrollbar-thumb {
-        background: #C43629;
-        height:30px;
-        border-radius: 0px;
-    }
-      
-    body::-webkit-scrollbar-track-piece
-    {
-        display:none;
-    } */
