@@ -91,12 +91,13 @@
 /* end wave styling */
 
 /* styling for project cards in projects.html */
-    .card {
+    .body .card {
         float: inline-start;
         box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
         transition: 0.5s;
         width: 20%;
         min-width: 250px;
+        max-width: 350px;
         border-radius: 5px;
         background-color: #474747;
         flex:auto;
