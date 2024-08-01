@@ -28,7 +28,7 @@ window.addEventListener('scroll', function() {
 
 // Handle dropdown button active state
 document.querySelectorAll('.dropbtn').forEach(button => {
-    button.addEventListener('click', function() {
+    button.addEventListener('hover', function() {
         this.classList.toggle('active');
         var dropdownContent = this.nextElementSibling;
         if (dropdownContent.style.display === "block") {
