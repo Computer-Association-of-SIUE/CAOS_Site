@@ -108,9 +108,26 @@
         .lightbox, .thumbnail {
             display: none;
         }
+
+        .gallery img {
+            margin: 10px;
+            cursor: pointer;
+            max-width: 90%;
+            width: 90%;
+            height: 90%;
+            border-radius: 10px;
+            aspect-ratio: 1;
+            object-fit: cover;
+        }
     }
 
 /* The following is for filtering */
+    #myBtnContainer .btn {
+        margin: 1%;
+        flex-direction: column;
+        justify-content: center;
+    }
+
     .filter {
         display: none;
         }
@@ -132,6 +149,7 @@
         background-color: white;
         cursor: pointer;
         border-radius: 5px;
+
     }
         
     .btn:hover {
