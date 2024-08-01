@@ -214,7 +214,8 @@
     #header p {
         font-size: 100%;
         position: relative;
-        text-align: left;        
+        text-align: left; 
+        z-index: -1;       
     }
 
     .bio-div {
