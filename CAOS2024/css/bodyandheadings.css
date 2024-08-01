@@ -195,6 +195,9 @@
     #annoying {
         display: none;
     }
+    #txt {
+        z-index: -1;
+    }
 
     #header h1 {
         position: relative;
@@ -205,6 +208,7 @@
         padding: 30px;
         flex-flow: column;
         translate: 37%;
+        z-index: -1;
 
     }
     #header p {
