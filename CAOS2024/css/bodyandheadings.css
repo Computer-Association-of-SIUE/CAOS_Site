@@ -240,7 +240,7 @@
         align-items: center;
     }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     .ring {
         width: 80%; /* Smaller size for mobile */
         height: 80%; /* Smaller size for mobile */
