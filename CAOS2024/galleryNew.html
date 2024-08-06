@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;600;700&display=swap" rel="stylesheet">    
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">    
+        <link 
+        href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" 
+        rel="stylesheet"
+        />
+        <link rel="stylesheet" type="text/css" href="css/footer.css">
+        <link rel="stylesheet" type="text/css" href="css/responsive_nav2.css">
+        <link rel="stylesheet" type="text/css" href="css/bodyandheadings.css">
+        <link rel="stylesheet" type="text/css" href="css/imagegallery.css">
+        <title>Gallery</title>
+        <link rel="icon" href="assets/CAOSLogoSmall.png" type="image/png">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/overlayscrollbars/1.13.0/css/OverlayScrollbars.min.css">
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/overlayscrollbars/1.13.0/js/OverlayScrollbars.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
+    </head>
+
+    <body>
+        <div class="topnav" id="myTopnav">
+            <a href="https://caos.cs.siue.edu" class="logo">
+              <img src="assets/CAOS_Transparent_Min.png" alt="CAOS Logo" style="width: 49px">
+            </a>
+            <div class="topnav-right">
+              <a href="aboutus.html" class="mobile-extend">About Us</a>
+              <a href="calendar.html" class="mobile-extend">Calendar</a>
+              <a href="projects.html" class="mobile-extend">Projects</a>
+              <div class="dropdown">
+                <button class="dropbtn">Resources 
+                  <i class="fa fa-caret-down" id="arrow"></i>
+                </button>
+                <div class="dropdown-content">
+                  <a href="future.html"><i class='bx bx-book-reader'></i> Website Updates</a>
+                  <a href="internships.html"><i class='bx bx-briefcase'></i> Internships</a>
+                  <a href="gallery.html" class="active"><i class='bx bx-image-alt'></i> Gallery</a>
+                </div>
+              </div> 
+              <a id="ignore" href="https://discord.gg/fSaXnVGnbv" class="join-btn">Join</a>
+            </div>
+            
+            <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+        </div>
+
+        <div class="body">
+            <h1>Image Gallery</h1>
+
+            <div id="myBtnContainer">
+            <button class="btn" onclick="filterSelection('all')">Show all</button>
+            <button class="btn" onclick="filterSelection('General')">General</button>
+            <button class="btn" onclick="filterSelection('eHacks2024')">eHacks 2024</button>
+            <button class="btn" onclick="filterSelection('AMAFall2023')">AMA Fall 2023</button>
+            </div>
+
+            <div class="gallery" onclick="openLightbox(event)">
+                <img class="filter General" src="assets/Engineering.png"
+                    alt="School of Engineering (Day)">
+                <img class="filter General" src="assets/Engineering_sunset.png"
+                    alt="School of Engineering (Sunset)">
+                <img class="filter General" src="assets/loft.png"
+                    alt="Innovation Loft">
+                <img class="filter eHacks2024" src="assets/caos_ehacks.jpg"
+                    alt="Ehacks CAOS Presentation">
+                <img class="filter AMAFall2023" src="assets/IMG_0366_4.jpg"
+                    alt="2 Former Officers of CAOS">
+                <img class="filter AMAFall2023" src="assets/IMG_0367_4.jpg"
+                    alt="Audience for AMA 2023">
+                <img class="filter AMAFall2023" src="assets/IMG_0368_2.jpg"
+                    alt="Former Officer">
+                <img class="filter AMAFall2023" src="assets/IMG_0370_2.jpg"
+                    alt="3 AMA Participants">
+                <img class="filter AMAFall2024" src="assets/IMG_0371_2.jpg"    
+                    alt="Zak, Current President">
+                <img class="filter General" src="assets/steak.jpg"    
+                    alt="Steak Statue">
+                <img class="filter eHacks2024" src="assets/eHacks2.jpg"    
+                    alt="Ehacks audience">
+                <img class="filter eHacks2024" src="assets/ehacksGroupPhoto.jpg"    
+                    alt="Ehacks Participants">
+            </div>
+        
+            <!-- Lightbox container -->
+            <div id="lightbox">
+                <!-- Close button -->
+                <span id="close-btn" onclick="closeLightbox()"><i class='bx bx-x' ></i></span>
+        
+                <!-- Main lightbox image -->
+                <img id="lightbox-img" src="" alt="lightbox image">
+        
+                <!-- Thumbnails container -->
+                <div id="thumbnail-container">
+                    <!-- Thumbnails will be added dynamically using JavaScript -->
+                </div>
+        
+                <!-- Previous and Next buttons -->
+                <button id="prev-btn" onclick="changeImage(-1)"><i class='bx bx-chevron-left' ></i></button>
+                <button id="next-btn" onclick="changeImage(1)"><i class='bx bx-chevron-right' ></i></button>
+            </div>
+        </div>
+        <script src="js/imagegallery.js"></script>
+        <script src="js/shownavbar2.js"></script>
+    </body>
+
+
+    <footer>
+        <div class="footer-home">
+            <a href="https://caos.cs.siue.edu/">
+                <i class='bx bx-home'></i>
+            </a>
+        </div>
+        <small>Built with ❤ by CAOS. <br>© 2024 CAOS. All rights reserved.<br></small>
+        <a href="http://www.siue.edu">
+            <img id="footer-logo" src="assets/Cougar_Logo_SIUE_Full-color_for-red-background_e5182d.png" alt="SIUE Logo">
+        </a>
+    </footer>
+</html>

@@ -1,6 +1,6 @@
 // ensure nav bar reverts back to desktop view when window is resized up
 window.addEventListener('resize', function() {
-    var nav = document.querySelector('.nav-links');
+    var nav = document.querySelector('.topnav-right');
     if (window.innerWidth > 768) {
         nav.classList.remove('responsive');
     }

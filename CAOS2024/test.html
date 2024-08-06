@@ -53,13 +53,22 @@
         border: none;
         outline: none;
         color: white;
-        padding: 9px 16px;
+        padding: 8px 16px;
         background-color: inherit;
         font-family: inherit;
-        margin: 0;
         font-family: "Chakra Petch", Arial, Helvetica, sans-serif;
         font-weight: 500;
         margin-right: 10px;
+        margin-top: 1px;
+      }
+
+      .dropdown-content::before {
+        content: "";
+        position: absolute;
+        height: 20px; /* Adjust this value to extend the hoverable space */
+        width: 100%;
+        left: 0;
+        top: -20px; /* This should be the negative of the height */
       }
 
       .dropdown-content a {
@@ -68,13 +77,14 @@
         text-decoration: none;
         display: block;
         text-align: left;
+        /* width: 100%; */
       }
 
       .dropdown:hover .dropdown-content {
         display: block;
       }
 
-      @media screen and (max-width: 600px) {
+      @media screen and (max-width: 768px) {
         .topnav a:not(:first-child), .dropdown .dropbtn, .topnav-right a {
           display: none;
         }
@@ -130,9 +140,6 @@
           background-color: #C43629;
           color: white;
           border-radius: 0px;
-          /* This below breaks the hamburger icon, but i need the links below to stretch same hover width as resources,
-          which work with 100% width */
-          /* width: 100%; */
         }
 
         .dropdown-content {
@@ -147,8 +154,11 @@
         .dropdown-content a:hover {
           background-color: #ddd;
           color: black;
-          width: 100%;
           border-radius: 0px;
+        }
+
+        .dropdown-content a {
+          width: 100%;
         }
 
         .mobile-extend:hover {
@@ -162,7 +172,7 @@
         }
       }
 
-      @media screen and (min-width: 600px) {
+      @media screen and (min-width: 768px) {
         /* Right-aligned section inside the top navigation */
         .topnav-right {
           float: right;
@@ -202,7 +212,7 @@
           border-radius: 5px;
         }
 
-        .topnav a:hover {
+        .topnav-right a:hover {
           background-color: #C43629;
           color: white;
           border-radius: 5px;
@@ -211,21 +221,34 @@
           display: none;
           position: absolute;
           background-color: #f9f9f9;
-          min-width: 160px;
           z-index: 1;
           border-radius: 5px;
+          /* border: 2px solid blue; */
+          min-width: 160px;
+          margin-top: 0.3rem;
+          top: 95%;
         }
 
         .dropdown-content a:hover {
           background-color: #ddd;
           color: black;
-          width: 100%;
-          border-radius: 5px;
+          /* border: 2px solid red; */
+        }
+
+        .dropdown-content a {
+          /* width: 160px; */
+          width: 83.7%;
         }
 
         .active-logo {
           background-color: #C43629; /* We need to add distinguishing colors for the active page */
           color: white;
+        }
+
+        .active-logo:hover {
+          background-color: #C43629; /* We need to add distinguishing colors for the active page */
+          color: white;
+          border-radius: 0; /* Remove border-radius */
         }
       }
     </style>
@@ -234,11 +257,12 @@
 
 <div class="topnav" id="myTopnav">
   <a href="https://caos.cs.siue.edu" class="active-logo">
-    <img src="CAOS2024/assets/CAOS_Transparent_Min.png" alt="CAOS Logo" style="width: 49px">
+    <img src="assets/CAOS_Transparent_Min.png" alt="CAOS Logo" style="width: 49px">
   </a>
   <div class="topnav-right">
     <a href="aboutus.html" class="mobile-extend">About Us</a>
     <a href="calendar.html" class="mobile-extend">Calendar</a>
+    <a href="projects.html" class="mobile-extend">Projects</a>
     <div class="dropdown">
       <button class="dropbtn">Resources 
         <i class="fa fa-caret-down" id="arrow"></i>
