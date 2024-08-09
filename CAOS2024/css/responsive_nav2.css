@@ -14,7 +14,7 @@
   float: left;
   display: block;
   color: #f2f2f2;
-  text-align: center;
+  /* text-align: center; */
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
@@ -74,6 +74,13 @@
   display: block;
 }
 
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
 @media screen and (max-width: 768px) {
   .topnav a:not(:first-child), .dropdown .dropbtn, .topnav-right a {
     display: none;
@@ -83,12 +90,13 @@
     display: block;
     margin-top: 0px;
     margin-right: 0px;
-    padding: 21px;
+    padding-top: 20px;
+    z-index: 1;
   }
 
   .topnav a.icon:hover {
-    background-color: white;
-    color: black;
+    background-color: black;
+    color: white;
   }
 
   .active {
@@ -96,11 +104,12 @@
     color: white;
   }
 
-  .topnav.responsive {position: relative;}
+  .topnav.responsive {position: fixed;}
   .topnav.responsive .icon {
     position: absolute;
     right: 0;
     top: 0;
+    z-index: 999;
   }
   .topnav.responsive a {
     float: none;
@@ -109,13 +118,16 @@
   }
   .topnav.responsive .dropdown {float: none;}
   .topnav.responsive .dropdown-content {
-    position: relative;
+    /* changed from position: relative */
+    position: absolute; 
+    width: 100%;
   }
   .topnav.responsive .dropdown .dropbtn {
     display: block;
     width: 100%;
     text-align: left;
   }
+  
   .topnav a.join-btn {
     display: none;
   }
@@ -166,8 +178,8 @@
 
   .logo {
     width: 84px;
-    height: 56px;
-    margin-bottom: -2px
+    height: 54px;
+    margin-bottom: 0px;
   }
 }
 
@@ -183,6 +195,10 @@
     background-color: #C43629; /* We need to add distinguishing colors for the active page */
     color: white;
     border-radius: 5px;
+  }
+
+  .topnav a {
+    text-align: left;
   }
 
   .topnav a.join-btn {
@@ -249,9 +265,3 @@
   }
 }
 
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  /* z-index: 2; */
-}

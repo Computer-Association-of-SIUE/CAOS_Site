@@ -1,26 +1,25 @@
 function myFunction() {
     var x = document.getElementById("myTopnav");
-    if (x.className === "topnav") {
-      x.className += " responsive";
+    if (x.className.indexOf("responsive") === -1) {
+        x.className += " responsive";
     } else {
-      x.className = "topnav";
+        x.className = x.className.replace(" responsive", "").trim();
     }
 }
 
 // Handle sticky navbar on scroll
 window.addEventListener('scroll', function() {
     var navbar = document.querySelector('.topnav');
-    var sticky = navbar.offsetTop; // Get the offset position of the navbar
-    if (window.scrollY >= sticky) {
-        navbar.classList.add("sticky")
+    if (window.pageYOffset > 0) {
+        navbar.classList.add('sticky');
     } else {
-        navbar.classList.remove("sticky");
+        navbar.classList.remove('sticky');
     }
 });
 
 // Handle dropdown button active state
 document.querySelectorAll('.dropbtn').forEach(button => {
-    button.addEventListener('hover', function() {
+    button.addEventListener('click', function() {
         this.classList.toggle('active');
         var dropdownContent = this.nextElementSibling;
         if (dropdownContent.style.display === "block") {

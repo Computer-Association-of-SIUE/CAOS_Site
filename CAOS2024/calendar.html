@@ -13,7 +13,7 @@
         rel="stylesheet"
         />
         <link rel="stylesheet" type="text/css" href="css/footer.css">
-        <link rel="stylesheet" type="text/css" href="css/responsive_nav.css">
+        <link rel="stylesheet" type="text/css" href="css/responsive_nav2.css">
         <link rel="stylesheet" type="text/css" href="css/bodyandheadings.css">
         <title>Calendar</title>
         <link rel="icon" href="assets/CAOSLogoSmall.png" type="image/png">
@@ -24,31 +24,31 @@
 
     <body>
         <div class="topnav" id="myTopnav">
-            <a href="https://caos.cs.siue.edu">
-                <img src="assets/CAOS_Transparent_Min.png" alt="CAOS Logo" style="width: 49px" class="active-logo">
+            <a href="https://caos.cs.siue.edu" class="logo">
+              <img src="assets/CAOS_Transparent_Min.png" alt="CAOS Logo" style="width: 49px">
             </a>
-            <div class="nav-links" id="navLinks">
-                <a href="aboutus.html">About Us</a>
-                <a href="calendar.html" class="active">Calendar</a>
-                <a href="projects.html">Projects</a>
-                <div class="dropdown">
-                    <button class="dropbtn">Resources
-                        <i class="fa fa-caret-down" id="arrow"></i>
-                    </button>
-                    <div class="dropdown-content">
-                        <a href="future.html"><i class='bx bx-book-reader'></i> Website Updates</a>
-                        <a href="internships.html"><i class='bx bx-briefcase'></i> Internships</a>
-                        <a href="gallery.html"><i class='bx bx-image-alt'></i> Gallery</a>
-                    </div>
+            <div class="topnav-right">
+              <a href="aboutus.html" class="mobile-extend">About Us</a>
+              <a href="calendar.html" class="mobile-extend active">Calendar</a>
+              <a href="projects.html" class="mobile-extend">Projects</a>
+              <div class="dropdown">
+                <button class="dropbtn">Resources 
+                  <i class="fa fa-caret-down" id="arrow"></i>
+                </button>
+                <div class="dropdown-content">
+                  <a href="future.html"><i class='bx bx-book-reader'></i> Website Updates</a>
+                  <a href="internships.html"><i class='bx bx-briefcase'></i> Internships</a>
+                  <a href="gallery.html"><i class='bx bx-image-alt'></i> Gallery</a>
                 </div>
-                <a id="ignore" href="https://discord.gg/fSaXnVGnbv" class="join-btn">Join</a>
+              </div> 
+              <a id="ignore" href="https://discord.gg/fSaXnVGnbv" class="join-btn">Join</a>
             </div>
-            <a href="javascript:void(0);" class="icon" onclick="showNavBar()">&#9776;</a>
+            
+            <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
         </div>
             <div class="body">
                 <h1>Calendar</h1>
                 <div class="calendar-container" style="text-align: center;"> <!-- This div allows the calendar to exist w/footer/, might need to make own specifc css -->
-                <script src="js/shownavbar.js"></script>
                     <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FChicago&bgcolor=%23ffffff&showTitle=0&src=c2l1ZS5lZHUuY2Fvc0BnbWFpbC5jb20&src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%23039BE5&color=%2333B679&color=%230B8043" style="border:solid 1px #777; filter: invert(.9) saturate(0.2) hue-rotate(145deg); z-index: -1;" frameborder="0" scrolling="no"></iframe></div>
                     <hr>
                     <h1>Upcoming Events - Fall 2024</h1>
@@ -72,7 +72,7 @@
                     </ul>
                 </div>
                 <hr>
-            <script src="js/shownavbar.js"></script>
+            <script src="js/shownavbar2.js"></script>
     </body>
     <footer>
         <div class="footer-home">

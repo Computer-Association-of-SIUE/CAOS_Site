@@ -13,7 +13,7 @@
         />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" type="text/css" href="css/footer.css">
-        <link rel="stylesheet" type="text/css" href="css/responsive_nav2.css">
+        <link rel="stylesheet" type="text/css" href="css/responsive_nav.css">
         <link rel="stylesheet" type="text/css" href="css/bodyandheadings.css">
         <title>Projects</title>
         <link rel="icon" href="assets/CAOSLogoSmall.png" type="image/png">
@@ -24,27 +24,26 @@
 
     <body>
         <div class="topnav" id="myTopnav">
-            <a href="https://caos.cs.siue.edu" class="logo">
-              <img src="assets/CAOS_Transparent_Min.png" alt="CAOS Logo" style="width: 49px">
+            <a href="https://caos.cs.siue.edu">
+                <img src="assets/CAOS_Transparent_Min.png" alt="CAOS Logo" style="width: 49px" class="active-logo">
             </a>
-            <div class="topnav-right">
-              <a href="aboutus.html" class="mobile-extend">About Us</a>
-              <a href="calendar.html" class="mobile-extend">Calendar</a>
-              <a href="projects.html" class="mobile-extend active">Projects</a>
-              <div class="dropdown">
-                <button class="dropbtn">Resources 
-                  <i class="fa fa-caret-down" id="arrow"></i>
-                </button>
-                <div class="dropdown-content">
-                  <a href="future.html"><i class='bx bx-book-reader'></i> Website Updates</a>
-                  <a href="internships.html"><i class='bx bx-briefcase'></i> Internships</a>
-                  <a href="gallery.html"><i class='bx bx-image-alt'></i> Gallery</a>
+            <div class="nav-links" id="navLinks">
+                <a href="aboutus.html">About Us</a>
+                <a href="calendar.html">Calendar</a>
+                <a href="projects.html" class="active">Projects</a>
+                <div class="dropdown">
+                    <button class="dropbtn">Resources
+                        <i class="fa fa-caret-down on-top" id="arrow"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="future.html"><i class='bx bx-book-reader'></i> Website Updates</a>
+                        <a href="internships.html"><i class='bx bx-briefcase'></i> Internships</a>
+                        <a href="gallery.html"><i class='bx bx-image-alt'></i> Gallery</a>
+                    </div>
                 </div>
-              </div> 
-              <a id="ignore" href="https://discord.gg/fSaXnVGnbv" class="join-btn">Join</a>
+                <a id="ignore" href="https://discord.gg/fSaXnVGnbv" class="join-btn">Join</a>
             </div>
-            
-            <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+            <a href="javascript:void(0);" class="icon" onclick="showNavBar()">&#9776;</a>
         </div>
         
         <div class="body" style="display: flex; flex-direction: column;">
@@ -92,7 +91,7 @@
                 </div>
             </div>
         </div>
-        <script src="js/shownavbar2.js"></script>
+        <script src="js/shownavbar.js"></script>
     </body>
     <footer>
         <div class="footer-home">
