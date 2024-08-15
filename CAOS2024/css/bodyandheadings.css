@@ -353,6 +353,14 @@
         text-align: center;
         padding: 2%;
     }
+
+    .button-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0px; /* Adjust the gap between buttons */
+    }
+    
     .buttonH {
         border-radius: 5px; 
         padding: 15px; 
@@ -403,3 +411,40 @@
         }
     }
 /* end styling for home page */
+.animated-text {
+    position: relative;
+    display: inline-block;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.svg-underline path {
+    stroke: #C43629; /* Change the color as needed */
+    /* stroke-width: 10; */
+    stroke-dasharray: 600px; 
+    stroke-dashoffset: 600px;
+    animation: dash 1.5s ease-in-out forwards;
+}
+
+@keyframes dash {
+    to {
+        stroke-dashoffset: 0;
+    }
+} 
+
+.svg-underline {
+    position: absolute;
+    bottom: -5px; /* Adjust this value to move the SVG closer or further from the text */
+    left: 0;
+    width: 100%;
+    height: 20px; /* Adjust height as needed */
+    z-index: -1;
+}
+
+.text {
+    display: inline-block;
+    position: relative;
+    z-index: 0;
+    margin-bottom: 0; /* Ensure no margin below the text */
+}
