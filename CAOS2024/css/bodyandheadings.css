@@ -555,4 +555,22 @@
         transform: translateY(0);
     }
 }
+
+@keyframes bounceOut {
+    20% {
+        transform: translateY(-10%);
+    }
+    40%, 45% {
+        opacity: 1;
+        transform: translateY(20%);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+}
+
+.bounceOut {
+    animation: bounceOut 0.4s ease-out forwards;
+}
 /* end styling for about us cards/lightbox */
