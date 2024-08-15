@@ -536,6 +536,7 @@
     width: 192px;
     height: auto;
     border-radius: 10px;
+    margin-top: 10px;
 }
 
 @keyframes bounceIn {
