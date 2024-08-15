@@ -411,6 +411,8 @@
         }
     }
 /* end styling for home page */
+
+/* styling for future svg path */
 .animated-text {
     position: relative;
     display: inline-block;
@@ -448,3 +450,108 @@
     z-index: 0;
     margin-bottom: 0; /* Ensure no margin below the text */
 }
+
+/* end styling for future svg path */
+
+/* begin styling for about us cards/lightbox */
+.parent-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Adjust the gap between the cards */
+}
+
+.lightbox {
+    display: none; /* Ensure the lightbox is hidden initially */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px; /* Add padding to ensure content doesn't touch the edges */
+}
+
+.lightbox-content {
+    position: relative;
+    margin: auto;
+    padding: 20px;
+    width: 90%; /* Use a percentage width for better responsiveness */
+    max-width: 500px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box; /* Ensure padding is included in the width calculation */
+    border-radius: 15px;
+    animation: bounceIn 0.4s ease-out; /* Reduced duration to 0.4s */
+}
+
+.lightbox-content img {
+    max-width: 100%; /* Ensure the image doesn't exceed the width of the lightbox content */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.officer-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    margin: 20px;
+    padding: 10px;
+    border: 5px solid white;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s;
+    box-shadow: 0 12px 24px 0 rgba(0,0,0,0.5);
+}
+
+.officer-card:hover {
+    transform: scale(1.05);
+}
+
+.officer-img {
+    width: 192px;
+    height: auto;
+    border-radius: 10px;
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    60% {
+        transform: translateY(-10%);
+        opacity: 1;
+    }
+    80% {
+        transform: translateY(5%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+/* end styling for about us cards/lightbox */
