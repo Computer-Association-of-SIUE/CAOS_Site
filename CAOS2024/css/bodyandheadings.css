@@ -367,11 +367,15 @@
         position: relative;
         text-decoration: none; 
         background-color: #C43629; 
+        transition: transform 0.3s ease;
         margin: 3%;
     }
 
     .buttonH:hover {
         background-color: #9b261b;
+        color: white;
+        box-shadow: 0 0 5px #fff;
+        transform: scale(1.1);
     }
 
     .imageH {
