@@ -227,6 +227,16 @@
     border-radius: 5px;
   }
 
+  .dropbtn:hover #arrow,
+  .dropdown:hover #arrow {
+      transform: rotate(180deg);
+      transition: transform 0.3s ease;
+  }
+
+  #arrow {
+      transition: transform 0.3s ease;
+  }
+
   .topnav-right a:hover {
     background-color: #C43629;
     color: white;
